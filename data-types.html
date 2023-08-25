@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Data Types</h2>
+
+<p id="number"></p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="name"></p>
+<p id="car"></p>
+<p id="answer"></p>
+<p id="decimal"></p>
+<p id="exponential"></p>
+<p id="bigint"></p>
+<p id="boolean"></p>
+<p id="array"></p>
+<p id="object"></p>
+
+<script>
+
+    const a = 39;
+    const b = 456;
+    document.getElementById("number").innerHTML = a + "<br>" + b;
+
+    const x = 16 + "volvo";
+    document.getElementById("demo").innerHTML = x;
+
+    const y = "volvo" + 16;
+    document.getElementById("demo1").innerHTML = y;
+
+    const z = 38 + 37 + "volvo";
+    document.getElementById("demo2").innerHTML = z;
+
+    const w = "volvo" + 16 + 7;
+    document.getElementById("demo3").innerHTML = w;
+
+    let n; // now n is undefined 
+    n = 25;  // now n is a number
+    n = "Roshani";  // now n is a string
+    document.getElementById("name").innerHTML = n;
+
+    const carName1 = "volvo";
+    const carName2 = "swift";
+    
+    document.getElementById("car").innerHTML = carName1 + "<br>" + carName2;
+
+    const answer = "it's alright";
+    const answer1 = "He is called 'Jonny";
+    const answer2 = 'He is called "Jonny"';
+
+    document.getElementById("answer").innerHTML =  answer + "<br>" + answer1 + "<br>" + answer2;
+
+
+    const q = 34.00;
+    const r = 34;
+    const s = 3.14;
+
+    document.getElementById("decimal").innerHTML =  q + "<br>" + r + "<br>" + s;
+
+    const t = 123e5;
+    const u = 123e-5;
+
+    document.getElementById("exponential").innerHTML = t + "<br>" + u;
+
+    const c = BigInt("8768767635544543345686164434")
+    document.getElementById("bigint").innerHTML = c;
+
+    const d = 5;
+    const e = 5;
+    const f = 6;
+
+    document.getElementById("boolean").innerHTML = ( d == e ) + "<br>" + ( e == f );
+
+    const cars = ["Volvo", "BMW", "Swift"];
+    document.getElementById("array").innerHTML = cars[0];
+
+    const person = {
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    }
+
+    document.getElementById("object").innerHTML = person.firstName + " is " + person.age + " years old.";
+
+
+</script>
+
+</body>
+</html>
