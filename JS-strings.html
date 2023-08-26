@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+    // example 1
+    const text = "hhgdfhghjwhdhg"
+    document.getElementById("demo").innerHTML = "length of text is " + text.length;
+
+    // example 2
+    const x = "john";
+    const y = new String("John");
+    document.getElementById("demo1").innerHTML = typeof x + "<br>" + typeof y;
+
+    // example 3
+    let m = "John";        // x is a string
+    let n = new String("John");  // y is an object
+    document.getElementById("demo2").innerHTML = (m==n);
+
+    // example 4
+    let o = "John";        // x is a string
+    let p = new String("John");  // y is an object
+    document.getElementById("demo3").innerHTML = (o===p);
+
+</script>
+
+</body>
+</html>
