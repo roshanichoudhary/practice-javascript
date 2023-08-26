@@ -8,6 +8,11 @@
 <p id="demo1"></p>
 <p id="demo2"></p>
 <p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
 
 <script>
 
@@ -21,16 +26,33 @@
     let d = 10;
     d += 5;
 
-    document.getElementById("demo2").innerHTML = "the value of " + d;
+    document.getElementById("demo2").innerHTML = "value of d is " + d;
 
     let text = "hello";
     text += " world";
 
     document.getElementById("demo3").innerHTML = text;
 
+    let c = 10;
+    c -= 5;
+    document.getElementById("demo4").innerHTML = "value of c is " + c;
 
 
+    let e = 10;
+    e *= 5;
+    document.getElementById("demo5").innerHTML = "value of e is " + e;
 
+    let f = 2;
+    f **= 2;
+    document.getElementById("demo6").innerHTML = "value of f is " + f;
+
+    let g = 10;
+    g /= 5;
+    document.getElementById("demo7").innerHTML = "value of g is " + g;
+
+    let h = 10;
+    h %= 5;
+    document.getElementById("demo8").innerHTML = "value of h is " + h;
 
 
 </script>
