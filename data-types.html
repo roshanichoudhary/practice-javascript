@@ -18,6 +18,8 @@
 <p id="boolean"></p>
 <p id="array"></p>
 <p id="object"></p>
+<p id="typeof"></p>
+<p id="undefined"></p>
 
 <script>
 
@@ -83,11 +85,30 @@
         age : 50,
         eyeColor : "blue"
     }
+    
 
     document.getElementById("object").innerHTML = person.firstName + " is " + person.age + " years old.";
 
+    // let car1;
 
-</script>
+    // document.getElementById("undefined").innerHTML = car1 + "<br>" + typeof car1;
+
+    document.getElementById("typeof").innerHTML = typeof 20 + "<br>" + typeof "rosh" 
+    + "<br>" + typeof false + "<br>" + typeof {} + "<br>" + typeof [] + "<br>" + typeof 3.14; 
+    + "<br>" + typeof (3+4) + "<br>" + typeof "";
+
+    
+
+    const car2 = "";
+
+    document.getElementById("undefined").innerHTML = typeof car2;
+
+    
+
+
+
+    
+    </script>
 
 </body>
 </html>
