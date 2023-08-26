@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Functions</h1>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<script>
+    // example 1
+    function myFunction(a, b){
+        return a * b;
+    }
+
+    x = myFunction( 30, 7 )
+
+    document.getElementById("demo").innerHTML = x;
+
+
+    // example 2
+    y = myFunction1( 30, 7 )
+
+    document.getElementById("demo1").innerHTML = y;
+
+    function myFunction1(c, d){
+        return c + d;
+    }
+
+
+    // example 3
+    function toCelsius(f){
+        return (5/9) * (f-32);
+    }
+
+    z = toCelsius(77);
+
+    document.getElementById("demo2").innerHTML = z;
+
+    // Accessing a function without () returns the function and not the function result:
+    function toCelsius(f){
+        return (5/9) * (f-32);
+    }
+
+    z = toCelsius;
+
+    document.getElementById("demo3").innerHTML = z;
+
+    // Using a function as a variable:
+
+    document.getElementById("demo4").innerHTML = "The temperature is " + toCelsius(77) + "   celsius";
+
+    function toCelsius(f){
+        return ( 5 / 9 ) * ( f - 32 );
+    }
+
+    // Outside myFunction() carName is undefined.
+
+    let text1 = "Outside: " + typeof carName;
+    document.getElementById("demo5").innerHTML = text1;
+
+    function myFunction2(){
+        let carName = "Volvo";
+        text2 = "Inside: " + typeof carName + " " +carName;
+        document.getElementById("demo6").innerHTML = text2;
+
+    }ß
+
+    myFunction2();
+    
+
+</script>
+
+
+
+</body>
+</html>
