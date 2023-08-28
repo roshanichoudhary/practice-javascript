@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Javascript string methods</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo13">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+
+        // length
+        const text1 = "abcdefghijklmnopqrstuvwxyz";
+        const length = text1.length;
+        document.getElementById("demo1").innerHTML = length;
+
+        
+        const str = "apple, banana, kiwi";
+
+        // slice
+        const part = str.slice(7);
+        // let part = str.slice( -12 , -6 );
+        // let part = str.slice( -12 );
+        document.getElementById("demo2").innerHTML = part;
+
+        // substring
+        const part1 = str.substring(7, 13);
+        document.getElementById("demo3").innerHTML = part1;
+
+        // substring
+        const part2 = str.substr(7);
+        const part3 = str.substr(7, 6);
+        const part4 = str.substr(-4);
+        document.getElementById("demo4").innerHTML = part2;
+        document.getElementById("demo5").innerHTML = part3;
+        document.getElementById("demo6").innerHTML = part4;
+
+        // replace
+        function myFunction(){
+            const text2 = document.getElementById("demo13").innerHTML;
+            // document.getElementById("demo13").innerHTML = text2.replace("Microsoft", "w3school")
+            // document.getElementById("demo13").innerHTML = text2.replace(/MICROSOFT/i, "w3school")
+            document.getElementById("demo13").innerHTML = text2.replace(/Microsoft/g, "w3school")
+        }
+
+        // replace all
+        let text3 = "I love cats. Cats are very easy to love, cats are very popular.";
+        text3 = text3.replaceAll("Cats", "Dogs");
+        text3 = text3.replaceAll("cats", "dogs");
+        document.getElementById("demo7").innerHTML = text3;
+
+        // trim
+        const text4 = "   Hello World   ";
+        const text5 = text4.trim();
+        document.getElementById("demo8").innerHTML = text5;
+        document.getElementById("demo9").innerHTML = "length of text4 = " + text4.length + "<br> and length of text5 = " + text5.length;
+
+
+        // pad
+        const numb = 5;
+        const text6 = numb.toString();
+        const padded = text6.padEnd(4, "0");
+        document.getElementById("demo10").innerHTML = padded;
+
+        // char at
+        const text7 = "Hello World";
+        const char1 = text7.charAt(0);
+        document.getElementById("demo11").innerHTML = char1;
+
+        const text8 = "Hello World";
+        const char2 = text8.charCodeAt(0);
+        document.getElementById("demo12").innerHTML = char2;
+
+        // split
+        const text9 = "a,b,c,d,e";
+        const myArray = text9.split(",");
+        document.getElementById("demo13").innerHTML = myArray[0];
+
+        let text10 = "Hello";
+        const myArr = text10.split("");
+
+        text10 = "";
+        for (let i=0; i < myArr.length; i++){
+            text10 += myArr[i] + "<br>";
+        }
+
+        document.getElementById("demo14").innerHTML = text10;
+
+
+
+        
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
+
