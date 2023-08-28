@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JavaScript String Search</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <script>
+
+        const text1 = "Please locate where 'locate' occurs!";
+        const index1 = text1.indexOf("locate");
+        document.getElementById("demo1").innerHTML = index1;
+
+        const text2 = "Please locate where 'locate' occurs!";
+        const index2= text2.lastIndexOf("locate");
+        document.getElementById("demo2").innerHTML = index2;
+
+        const text3 = "Please locate where 'locate' occurs!";
+        const index3 = text3.indexOf("john");
+        document.getElementById("demo3").innerHTML = index3;
+
+        const text4 = "Please locate where 'locate' occurs!";
+        const index4 = text4.indexOf("locate", 15);
+        document.getElementById("demo4").innerHTML = index4;
+
+        const text5 = "Please locate where 'locate' occurs!";
+        const index5 = text5.lastIndexOf("locate", 15);
+        document.getElementById("demo5").innerHTML = index5;
+
+
+
+
+
+    </script>
+
+</body>
+</html>
