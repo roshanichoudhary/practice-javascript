@@ -24,27 +24,52 @@
 
     <script>
 
-        const text1 = "Please locate where 'locate' occurs!";
-        const index1 = text1.indexOf("locate");
+         let text = "Please locate where 'locate' occurs!";
+
+        // locate
+        const index1 = text.indexOf("locate");
         document.getElementById("demo1").innerHTML = index1;
 
-        const text2 = "Please locate where 'locate' occurs!";
-        const index2= text2.lastIndexOf("locate");
+        const index2= text.lastIndexOf("locate");
         document.getElementById("demo2").innerHTML = index2;
 
-        const text3 = "Please locate where 'locate' occurs!";
-        const index3 = text3.indexOf("john");
+        const index3 = text.indexOf("john");
         document.getElementById("demo3").innerHTML = index3;
 
-        const text4 = "Please locate where 'locate' occurs!";
-        const index4 = text4.indexOf("locate", 15);
+        const index4 = text.indexOf("locate", 15);
         document.getElementById("demo4").innerHTML = index4;
 
-        const text5 = "Please locate where 'locate' occurs!";
-        const index5 = text5.lastIndexOf("locate", 15);
+        const index5 = text.lastIndexOf("locate", 15);
         document.getElementById("demo5").innerHTML = index5;
 
+        // search
+        const index6 = text.search("locate");
+        document.getElementById("demo6").innerHTML = index6;
 
+        const index7 = text.search(/locate/i);
+        document.getElementById("demo7").innerHTML = index7;
+
+
+        let text1 = "The rain in SPAIN stays mainly in the plain";
+        
+        // match
+        const myArr1 = text1.match("ain");
+        document.getElementById("demo8").innerHTML = myArr1.length + "" + myArr1;
+
+        // matchAll
+        const iterator = text1.matchAll("ain");
+        document.getElementById("demo9").innerHTML = Array.from(iterator);
+
+        let text2 = "Hello world, welcome to the universe"; 
+        document.getElementById("demo10").innerHTML = text2.startsWith("Hello");
+
+        document.getElementById("demo11").innerHTML = text2.startsWith("world");
+
+        document.getElementById("demo12").innerHTML = text2.startsWith("world", 6);
+
+        document.getElementById("demo13").innerHTML = text2.endsWith("universe");
+
+        document.getElementById("demo14").innerHTML = text2.endsWith("world", 11);
 
 
 
