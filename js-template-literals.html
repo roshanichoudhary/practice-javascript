@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JavaScript Template Literals </h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        //  example 1
+        const text1 = 
+        `I am
+        "Roshani", 
+        My age is
+        '32'`;
+        document.getElementById("demo1").innerHTML = text1;
+
+        // example 2
+        const firstName = "Roshani";
+        const lastName = "Shete";
+
+        document.getElementById("demo2").innerHTML = `My name is ${firstName} ${lastName}`;
+
+        // example 3
+        let price = 10;
+        let VAT = 0.25
+        let total = `${ (price * ( 1 + VAT )).toFixed(2)}`;
+        document.getElementById("demo3").innerHTML = total;
+
+        // example 4
+        let header = "Template Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h4>${header}</h4><ul>`;
+
+        for (const x of tags){
+            html += `<li>${x}</li>`;  
+        }
+        html += '</ul>'
+        document.getElementById("demo4").innerHTML = html;
+    </script>
+
+</body>
+</html>
