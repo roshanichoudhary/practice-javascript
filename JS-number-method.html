@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JavaScript Number Method</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    
+
+    <script> 
+
+        const a = 123;
+        document.getElementById("demo1").innerHTML = a.toString() + (123).toString() + (100+23).toString();
+
+        const b = 9.656;
+        document.getElementById("demo2").innerHTML = b.toFixed(0) + "<br>" + b.toFixed(2) + "<br>" + b.toFixed(5);
+
+        const c = 9.656;
+        document.getElementById("demo3").innerHTML = b.toPrecision() + "<br>" + b.toPrecision(2) + "<br>" + b.toPrecision(4) + "<br>" + b.toPrecision(6);
+
+        document.getElementById("demo4").innerHTML = parseFloat("10") + "<br>" + parseFloat("10.5") + "<br>" 
+        + parseFloat ("years 10") + "<br>" +  parseFloat ("10 yeasr");
+
+        document.getElementById("demo5").innerHTML = Number.parseInt("-10.05") + "<br>" + Number.parseInt("-10.33") + "<br>" 
+        + Number.parseInt ("years 10") + "<br>" +  Number.parseInt ("10 yeasr");
+
+        document.getElementById("demo6").innerHTML = Number.parseFloat("10") + "<br>" + Number.parseFloat("10.33") + "<br>"
+         + Number.parseFloat ("years 10") + "<br>" +  Number.parseFloat ("10 yeasr"); + "<br>" + Number.parseFloat("10 20 30");
+
+         const num = 15;
+         const n = num.valueOf();
+         document.getElementById("demo7").innerHTML = n;
+    
+    </script>
+
+</body>
+</html>
