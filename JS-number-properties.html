@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JavaScript Number Properties</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+        const a = Number.EPSILON;
+        document.getElementById("demo1").innerHTML = a;
+
+        const b = Number.MAX_VALUE;
+        document.getElementById("demo2").innerHTML = b;
+
+        const d = Number.MIN_VALUE;
+        document.getElementById("demo3").innerHTML = d;
+
+        // Using a Number property on a variable, or value, will return undefined:
+        const c = 6;
+        document.getElementById("demo4").innerHTML = c.MAX_VALUE;
+
+        const e = Number.MAX_SAFE_INTEGER;
+        const f = Number.MIN_SAFE_INTEGER;
+        const g = Number.NaN;
+        const h = Number.POSITIVE_INFINITY;
+        const i = Number.NEGATIVE_INFINITY;
+
+        document.getElementById("demo5").innerHTML = e;
+        document.getElementById("demo6").innerHTML = f;
+        document.getElementById("demo7").innerHTML = g;
+        document.getElementById("demo8").innerHTML = h;
+        document.getElementById("demo9").innerHTML = i;
+
+
+
+    </script>
+    
+</body>
+</html>
