@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>    
+    <p id="demo20"></p>    
+
+    <script>
+
+        const cars = ["Volvo", "SAAB", "BMW"];
+        const cars2 = [
+            "Volvo",
+             "SAAB", 
+             "BMW"
+        ];
+        document.getElementById("demo1").innerHTML = cars;
+        document.getElementById("demo2").innerHTML = cars2;
+
+        const cars1 = [];
+        cars1[0] = "Volvo";
+        cars1[1] = "SAAB";
+        cars1[2] = "BMW";
+        document.getElementById("demo3").innerHTML = cars1;
+
+        const cars3 = new Array("Volvo", "SAAB", "BMW");
+        document.getElementById("demo4").innerHTML = cars3;
+
+        const car = cars3[0];
+        document.getElementById("demo5").innerHTML = car;
+
+        cars3[0] = "Opel";
+        document.getElementById("demo6").innerHTML = cars3;
+
+        const fruits = ["apple", "orange", "banana", "straberry", "mango"];
+        document.getElementById("demo7").innerHTML = fruits.toString();
+        const length = fruits.length;
+        document.getElementById("demo8").innerHTML = length;
+
+        // accessing 1st element
+        const fe = fruits[0];
+        document.getElementById("demo9").innerHTML = fe; 
+
+        // accessing last element
+        const le = fruits[fruits.length-1];
+        document.getElementById("demo10").innerHTML = le; 
+
+        // array
+        const person = ["John", "Doe", 46];
+        document.getElementById("demo11").innerHTML = person[0];
+
+        // object
+        const person1 = {firstname: "John", lastname: "Doe", age: 46};
+        document.getElementById("demo12").innerHTML = person1.firstname;
+
+        // looping array elements
+        let text =  `<ul>`;
+
+        for(let i = 0; i < fruits.length; i++){
+            text += `<li>${fruits[i]}</li>`;
+        }
+
+        text += `</ul>`;
+        document.getElementById("demo13").innerHTML = text;
+
+        // for each
+        let text1 = "<ul>";
+        fruits.forEach(myFunction);
+        text1 += "</ul>";
+
+        document.getElementById("demo14").innerHTML = text1;
+
+        function myFunction(value){
+            text1 += "<li>" + value + "</ul>"
+        }
+
+        // Adding elements with high indexes can create undefined "holes" in an array:
+        fruits[10] = "Pineapple";
+
+        text2 = "";
+
+        for(let i = 0; i < fruits.length; i++){
+            text2 += fruits[i] + "<br>";
+        }
+
+        document.getElementById("demo15").innerHTML = text2;
+
+        document.getElementById("demo16").innerHTML = Array.isArray(fruits);
+        document.getElementById("demo17").innerHTML = fruits instanceof Array;
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
