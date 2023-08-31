@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>JavaScript Numbers</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <script>
+
+        // example 1
+        const a = 3.14;
+        const b = 3;
+        document.getElementById("demo1").innerHTML = a + "<br>" + b;
+
+        // example 2
+        const c = 123e5;
+        const d = 123e-5;
+        document.getElementById("demo2").innerHTML = c + "<br>" + d;
+
+        // Integers (numbers without a period or exponent notation) are accurate up to 15 digits:
+        const e = 999999999999999;
+        const f = 9999999999999999;
+        document.getElementById("demo3").innerHTML = e + "<br>" + f;
+
+        // Floating point arithmetic is not always 100% accurate.
+        const g = 0.1 + 0.2;
+        document.getElementById("demo4").innerHTML = "0.1 + 0.2 = " + g;
+
+        // But it helps to multiply and divide:
+        const h = (0.1*10 + 0.2*10) / 10;
+        document.getElementById("demo5").innerHTML = "0.1 + 0.2 = " + h;
+
+        //  example 6
+        const i = 10;
+        const j = 20;
+        document.getElementById("demo6").innerHTML = i + j;
+
+        // example 7
+        const k = "10";
+        const l = "20";
+        document.getElementById("demo7").innerHTML = k + l;
+
+        // example 8
+        const m = 10;
+        const n = 20;
+        const p = "30";
+        document.getElementById("demo8").innerHTML = m + n + p;
+
+        // JavaScript will try to convert strings to numbers when dividing:
+        const q = "100";
+        const r = "10";
+        document.getElementById("demo9").innerHTML = q / r;
+        document.getElementById("demo10").innerHTML = q - r;
+        document.getElementById("demo11").innerHTML = q * r;
+        // this will not work as numeric operation , because it adds and concats
+        document.getElementById("demo12").innerHTML = q + r;
+
+        // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+        const s = 100;
+        const t = "apple";
+        document.getElementById("demo13").innerHTML = s / t;
+
+        // However, if the string is numeric, the result will be a number:
+        const u = 100;
+        const v = "10";
+        document.getElementById("demo14").innerHTML = u / v;
+
+        const w = 100 / "apple";
+        document.getElementById("demo15").innerHTML = isNaN("w"); 
+
+        const y = NaN;
+        const z = 100;
+        const ab = "100";
+        document.getElementById("demo16").innerHTML = y + 100;
+        document.getElementById("demo17").innerHTML = y + ab
+        document.getElementById("demo18").innerHTML = typeof y;
+
+        // infinity
+        document.getElementById("demo19").innerHTML = 100 / 0;
+        document.getElementById("demo20").innerHTML = typeof Infinity;
+
+        // 0x
+        const cd = 0xFF;
+        document.getElementById("demo21").innerHTML = "0xFF = " + cd;
+
+        // numbers and objects
+        const de = 123; 
+        const fg = new Number(123);
+        const hi = new Number(123);
+        document.getElementById("demo22").innerHTML = (de == fg);
+        document.getElementById("demo23").innerHTML = (de === fg);
+
+        // objects can not be compaired, Comparing two JavaScript objects always returns false
+        document.getElementById("demo24").innerHTML = (fg == hi);
+        document.getElementById("demo25").innerHTML = (fg === hi);
+
+
+
+
+        
+
+
+        
+    </script>
+
+</body>
+</html>
