@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!-- To create a BigInt, append n to the end of an integer or call BigInt(): -->
+    <h1>JavaScript BigInt</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+        const a = 999999999999999999;
+        const b = 999999999999999999n;
+        const c = BigInt(1234567890123456789012345);
+        const d = BigInt("1234567890123456789012345");
+        const e = 1234567890123456789012345n;
+        const f = 8972786767862763656567597n;
+
+        const g = e * f;
+        const h = e + f;
+
+        document.getElementById("demo1").innerHTML = a + "<br>" + b + "<br>" + c;
+        document.getElementById("demo2").innerHTML = "type of c = " + typeof c;
+        document.getElementById("demo3").innerHTML = "type of d = " + typeof d;
+        document.getElementById("demo4").innerHTML = "addition = " + h;
+        document.getElementById("demo5").innerHTML = "multiply = " + g;
+
+        // A BigInt can not have decimals. Cannot mix BigInt and other types, use explicit conversions.
+        const i = 5n;
+        const j = Number(i) / 2;
+        // const j = i / 2;  Error
+        document.getElementById("demo6").innerHTML = j;
+
+        const k = 10;
+        const l = 10.5;
+        const m = 1254476556445332677665;
+
+        document.getElementById("demo7").innerHTML = Number.isInteger(k) + "<br>" + Number.isInteger(l) + "<br>" + Number.isSafeInteger(m);
+        
+
+
+        
+
+
+
+
+
+
+
+    
+
+
+    </script>
+</body>
+</html>
