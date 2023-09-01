@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Array Const</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+ 
+
+    <script>
+        // ex 1
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo1").innerHTML = cars;
+
+        // An array declared with const cannot be reassigned:
+        // cars = ["Toyota", "Volvo", "Audi"]; ERROR    
+
+        // you can  add items
+        cars.push("Audi");
+        cars[0] = "Toyoto";
+        document.getElementById("demo2").innerHTML = cars;
+
+        // An array declared with const must be initialized when it is declared.
+        // const cars1; 
+        // cars1 = ["Saab", "Volvo", "BMW"]; SYNTAX ERROR
+
+        const cars = ["Saab", "Volvo", "BMW"];
+        // Here cars[0] is "Saab"
+        {
+        const cars = ["Toyota", "Volvo", "BMW"];
+        // Here cars[0] is "Toyota"
+        }
+        // Here cars[0] is "Saab"
+
+
+        const cars = ["Volvo", "BMW"];   // Allowed
+        const cars = ["Volvo", "BMW"];   // Not allowed
+        var cars = ["Volvo", "BMW"];     // Not allowed
+        cars = ["Volvo", "BMW"];         // Not allowed
+
+        {
+            const cars = ["Volvo", "BMW"]; // Allowed
+            const cars = ["Volvo", "BMW"]; // Not allowed
+            var cars = ["Volvo", "BMW"];   // Not allowed
+            cars = ["Volvo", "BMW"];       // Not allowed
+        }
+
+
+        const cars = ["Volvo", "BMW"];   // Allowed
+        {
+        const cars = ["Volvo", "BMW"]; // Allowed
+        }
+        {
+        const cars = ["Volvo", "BMW"]; // Allowed
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
