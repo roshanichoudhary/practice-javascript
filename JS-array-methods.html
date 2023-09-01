@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+
+    <script>
+        
+        let fruits = ["Banana", "Apple", "Orange", "Mango"]
+
+        // join
+        document.getElementById("demo1").innerHTML = fruits.join(" * ");
+
+        // pop
+        document.getElementById("demo2").innerHTML = fruits.pop();
+        document.getElementById("demo3").innerHTML = fruits;
+
+        // push
+        document.getElementById("demo4").innerHTML = fruits.push("kiwi");
+        document.getElementById("demo5").innerHTML = fruits;
+
+        // shift
+        document.getElementById("demo6").innerHTML = fruits.shift();
+        document.getElementById("demo7").innerHTML = fruits;
+
+        // unshift
+        document.getElementById("demo8").innerHTML = fruits.unshift("Lemon");
+        document.getElementById("demo9").innerHTML = fruits;
+
+        // append first
+        fruits[0] = "Banana";
+        document.getElementById("demo10").innerHTML = fruits;
+
+        // apend last
+        fruits[fruits.length] = "Lemon";
+        document.getElementById("demo11").innerHTML = fruits;
+
+        // Deleting elements leaves undefined holes in an array:
+        document.getElementById("demo12").innerHTML = "the first fruit is: " + fruits[0];
+        delete fruits[0];
+        document.getElementById("demo13").innerHTML = "the first fruit is: " + fruits[0];
+        document.getElementById("demo14").innerHTML = fruits;
+
+        // concat
+        const arr1 = ["Cecieli", "Lone"];
+        const arr2 = ["Emil", "Tobius", "Linus"];
+        const arr3 = ["Robin", "Morgan"];
+        const myConcat1 = arr1.concat(arr2);
+        const myConcat2 = arr1.concat(arr2, arr3);
+        const myConcat3 = arr1.concat("Peter");
+        document.getElementById("demo15").innerHTML = myConcat1;
+        document.getElementById("demo16").innerHTML = myConcat2;
+        document.getElementById("demo17").innerHTML = myConcat3;
+
+        // flat
+        const myArr = [[1,2], [3,4], [5,6]];
+        const newArr = myArr.flat();
+        document.getElementById("demo18").innerHTML = newArr;
+
+        // splice
+        fruits[0]="banana";
+        document.getElementById("demo19").innerHTML = "original array " + "<br>" + fruits;
+        const removed = fruits.splice(2, 2, "Pineapple", "Berry");
+        document.getElementById("demo20").innerHTML = "new array " + "<br>" + fruits;
+        document.getElementById("demo21").innerHTML = "removed element " + "<br>" + removed;
+        fruits.splice(0, 1);
+        document.getElementById("demo22").innerHTML = "new array " + "<br>" + fruits;
+
+        // slice
+        fruits = ["Pineapple", "Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const citrus = fruits.slice(1);
+        document.getElementById("demo24").innerHTML = fruits + "<br>" + "slice array " + "<br>" + citrus;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
