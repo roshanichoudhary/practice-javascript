@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Get Date Methods</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+
+    <script>
+      const d1 = new Date();
+      const d2 = new Date("2015-03-25");
+      const d3 = new Date("1970-01-01");
+
+      document.getElementById("demo1").innerHTML = d1.getFullYear();
+      document.getElementById("demo2").innerHTML = d2.getFullYear();
+
+      document.getElementById("demo3").innerHTML = d1.getMonth();
+      document.getElementById("demo4").innerHTML = d2.getMonth();
+
+      // You can use an array of names to return the month as a name:
+      const Months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const month1 = Months[d1.getMonth()];
+      const month2 = Months[d2.getMonth()];
+      document.getElementById("demo5").innerHTML = month1;
+      document.getElementById("demo6").innerHTML = month2;
+
+      document.getElementById("demo7").innerHTML = d1.getDate();
+      document.getElementById("demo8").innerHTML = d2.getDate();
+
+      // Return the hours of a date as a number (0-23):
+      document.getElementById("demo9").innerHTML = d1.getHours();
+      document.getElementById("demo10").innerHTML = d2.getHours();
+
+      document.getElementById("demo11").innerHTML = d1.getMinutes();
+      document.getElementById("demo12").innerHTML = d2.getMinutes();
+
+      // Return the seconds of a date as a number (0-59)
+      document.getElementById("demo13").innerHTML = d1.getSeconds();
+      document.getElementById("demo14").innerHTML = d2.getSeconds();
+
+      // Return the milliseconds of a date as a number (0-999):
+      document.getElementById("demo15").innerHTML = d1.getMilliseconds();
+      document.getElementById("demo16").innerHTML = d2.getMilliseconds();
+
+      document.getElementById("demo17").innerHTML = d1.getDay();
+      document.getElementById("demo18").innerHTML = d2.getDay();
+
+      const Days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const day1 = Days[d1.getDay()];
+      const day2 = Days[d2.getDay()];
+      document.getElementById("demo19").innerHTML = day1;
+      document.getElementById("demo20").innerHTML = day2;
+
+      // Return the number of milliseconds since midnight January 1, 1970:
+      document.getElementById("demo21").innerHTML = d1.getTime();
+      document.getElementById("demo22").innerHTML = d2.getTime();
+      document.getElementById("demo23").innerHTML = d3.getTime();
+
+      const dateNow = Date.now();
+      document.getElementById("demo24").innerHTML = dateNow;
+
+      // Calculate milliseconds in a year
+      const minute = 1000 * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+      const year = day * 365;
+
+      // Divide Date.now() with a year
+      const years = Math.round(Date.now() / year);
+      document.getElementById("demo25").innerHTML = years;
+    </script>
+  </body>
+</html>
