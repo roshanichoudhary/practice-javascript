@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Set Date Methods</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+
+    <script>
+      const d = new Date();
+      d.setFullYear(2020);
+      document.getElementById("demo1").innerHTML = d;
+
+      d.setFullYear(2020, 11, 22);
+      document.getElementById("demo2").innerHTML = d;
+
+      d.setMonth(10);
+      document.getElementById("demo3").innerHTML = d;
+
+      d.setDate(21);
+      document.getElementById("demo4").innerHTML = d;
+
+      d.setDate(d.getDate() + 50);
+      document.getElementById("demo5").innerHTML = d;
+
+      d.setHours(23);
+      document.getElementById("demo6").innerHTML = d;
+
+      d.setMinutes(30);
+      document.getElementById("demo7").innerHTML = d;
+
+      d.setSeconds(52);
+      document.getElementById("demo8").innerHTML = d;
+
+      d.setMilliseconds(33);
+      document.getElementById("demo9").innerHTML = d;
+
+      let text = "";
+      const today = new Date();
+      const someday = new Date();
+      someday.setFullYear(2100, 0, 8);
+
+      if (someday > today) {
+        text = "Today is before January 2100";
+      } else {
+        text = "Today is after January 2100";
+      }
+      document.getElementById("demo9").innerHTML = text;
+    </script>
+  </body>
+</html>
