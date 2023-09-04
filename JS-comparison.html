@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>JavaScript Comparison</h1>
+
+    <input id="age" value="18" />
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <p>Car name is:</p>
+    <p id="demo3"></p>
+
+    <script>
+      function myFunction() {
+        let voteable;
+        const age = Number(document.getElementById("age").value);
+
+        if (isNaN(age)) {
+          voteable = "Input is not a number";
+        } else {
+          voteable = age >= 18 ? "You are eligible" : "You are not eligible";
+        }
+
+        document.getElementById("demo1").innerHTML = voteable + " to vote";
+      }
+
+      //   The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the second.
+      const name = null;
+      const text = "missing";
+      const result = name ?? text;
+      document.getElementById("demo2").innerHTML = "The name is " + result;
+
+      //   The ?. operator returns undefined if an object is undefined or null (instead of throwing an error)
+      const car = { type: "Fiat", Modal: "500", color: "white" };
+      const name1 = car?.name;
+      document.getElementById("demo3").innerHTML = name1;
+    </script>
+  </body>
+</html>
