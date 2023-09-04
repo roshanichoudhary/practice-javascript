@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>JavaScript For In</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      // object
+      const person = { fname: "John", lname: "Doe", age: 40 };
+      text = "";
+      text1 = "";
+      for (let x in person) {
+        text1 += x + " "; // get keys
+        text += person[x] + " "; // get values
+      }
+      document.getElementById("demo1").innerHTML = text;
+      document.getElementById("demo2").innerHTML = text1;
+
+      //   array
+      const numbers = [40, 58, 3, 9, 29, 7];
+      let txt = "";
+      for (let n in numbers) {
+        txt += numbers[n] + "<br>";
+      }
+      document.getElementById("demo3").innerHTML = txt;
+
+      //   It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
+      let txt1 = "";
+
+      numbers.forEach(myFunction);
+
+      function myFunction(value) {
+        txt1 += value + "<br>";
+      }
+      document.getElementById("demo4").innerHTML = txt1;
+    </script>
+  </body>
+</html>
