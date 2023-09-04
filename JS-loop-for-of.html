@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript For Of</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      const cars = ["Volvo", "SAAB", "BMW"];
+      let text = "";
+      for (let x of cars) {
+        text += x + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = text;
+
+      const language = "JavaScript";
+      let txt = "";
+      for (let y of language) {
+        txt += y + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = txt;
+    </script>
+  </body>
+</html>
