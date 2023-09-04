@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT</title>
+  </head>
+  <body>
+    <h1>JavaScript Booleans</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+
+    <script>
+      document.getElementById("demo1").innerHTML = Boolean(12 > 8);
+      document.getElementById("demo2").innerHTML = 16 > 5;
+
+      //  Everything With a "Value" is True
+      //   Any (not empty) string is true
+      document.getElementById("demo3").innerHTML = Boolean(100);
+      document.getElementById("demo4").innerHTML = Boolean(3.14);
+      document.getElementById("demo5").innerHTML = Boolean(-15);
+
+      //   Even the string 'false' is true
+      document.getElementById("demo6").innerHTML = Boolean(false);
+
+      //   Any expression (except zero) is true
+      document.getElementById("demo7").innerHTML = Boolean(5 + 40 + 10);
+
+      //   zero will be false
+      document.getElementById("demo8").innerHTML = Boolean(0);
+
+      //   Everything Without a "Value" is False
+      const a = 0;
+      document.getElementById("demo9").innerHTML = Boolean(a);
+
+      const b = -0;
+      document.getElementById("demo10").innerHTML = Boolean(b);
+
+      const c = false;
+      document.getElementById("demo11").innerHTML = Boolean(c);
+
+      //   const d = Null;
+      //   document.getElementById("demo12").innerHTML = Boolean(d);
+
+      const e = 1 / "Hello";
+      document.getElementById("demo13").innerHTML = Boolean(e);
+
+      let x;
+      document.getElementById("demo14").innerHTML = Boolean(x);
+
+      const f = "";
+      document.getElementById("demo15").innerHTML = Boolean(f);
+
+      const g = false;
+      document.getElementById("demo16").innerHTML = typeof g;
+
+      const h = new Boolean(false);
+      document.getElementById("demo17").innerHTML = typeof h;
+
+      document.getElementById("demo18").innerHTML = g == h;
+      document.getElementById("demo19").innerHTML = g === h;
+
+      const i = new Boolean(false);
+      document.getElementById("demo20").innerHTML = h == i;
+      document.getElementById("demo21").innerHTML = h === i;
+    </script>
+  </body>
+</html>
