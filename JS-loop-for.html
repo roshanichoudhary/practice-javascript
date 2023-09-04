@@ -7,7 +7,8 @@
   </head>
   <body>
     <h1>JavaScript For Loop</h1>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
 
     <script>
       const cars = ["Volvo", "Saab", "BMW"];
@@ -15,7 +16,14 @@
       for (i = 0, len = cars.length, text = ""; i < len; i++) {
         text += cars[i] + "<br>";
       }
-      document.getElementById("demo").innerHTML = text;
+      document.getElementById("demo1").innerHTML = text;
+
+      text1 = "";
+
+      for (i = 0; i < 6; i++) {
+        text1 += "The number is " + i + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = text1;
     </script>
   </body>
 </html>
