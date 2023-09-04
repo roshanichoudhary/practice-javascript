@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>JavaScript if, else, and else if</h1>
+    <p id="demo"></p>
+    <script>
+      const time = new Date().getHours();
+
+      let greetings;
+
+      if (time < 10) {
+        greetings = "Good Morning";
+      } else if (time < 20) {
+        greetings = "Good Day";
+      } else {
+        greetings = "Good Evening";
+      }
+
+      document.getElementById("demo").innerHTML = greetings;
+    </script>
+  </body>
+</html>
