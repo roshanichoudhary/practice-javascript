@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>JavaScript Array Iteration</h1>
     <p id="demo1"></p>
     <p id="demo2"></p>
@@ -28,116 +28,104 @@
     <p id="demo19"></p>
 
     <script>
+      const fruits = ["Apple", "Orange", "Apple", "Mango"];
+      const numbers = [40, 7, 3, 9, 2, 67];
 
-        const fruits = ["Apple", "Orange", "Apple", "Mango"];
-        const numbers = [40, 7, 3, 9, 2, 67];
+      // for each
+      let num = "";
 
-        // for each
-        let num = "";
+      numbers.forEach(myFunction);
 
-        numbers.forEach(myFunction);
+      function myFunction(value, index, array) {
+        num += value + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = num;
 
-        function myFunction(value, index, array){
-            num += value + "<br>";
-        }
-        document.getElementById("demo1").innerHTML = num;
+      //  map function
+      const mapFunc = numbers.map(myFunc);
+      document.getElementById("demo2").innerHTML = mapFunc;
 
-        //  map function
-        const mapFunc = numbers.map(myFunc);
-        document.getElementById("demo2").innerHTML = mapFunc;
+      function myFunc(value, index, array) {
+        return value * 2;
+      }
 
-        function myFunc(value, index, array){
-            return value * 2;
-        }
+      // flatMap
+      const newArr = numbers.flatMap((x) => x * 2);
+      document.getElementById("demo3").innerHTML = newArr;
 
-        // flatMap
-        const newArr = numbers.flatMap((x) => x * 2);
-        document.getElementById("demo3").innerHTML = newArr;
+      // filter
+      const myFilter = numbers.filter(myFilterFunc);
 
-        // filter
-        const myFilter = numbers.filter(myFilterFunc);
-        
-        function myFilterFunc(value, index, array){
-            return value > 18;
-        }
-        document.getElementById("demo4").innerHTML = myFilter;
+      function myFilterFunc(value, index, array) {
+        return value > 18;
+      }
+      document.getElementById("demo4").innerHTML = myFilter;
 
-        // reduce
-        const reduceArr = numbers.reduce(myReduceFunc);
-        const reduceArr2 = numbers.reduceRight(myReduceFunc, 20);
-        const reduceArr1 = numbers.reduce(myReduceFunc, 100);
+      // reduce
+      const reduceArr = numbers.reduce(myReduceFunc);
+      const reduceArr2 = numbers.reduceRight(myReduceFunc, 20);
+      const reduceArr1 = numbers.reduce(myReduceFunc, 100);
 
-        function myReduceFunc(total, value){
-            return total + value;
-        }
+      function myReduceFunc(total, value) {
+        return total + value;
+      }
 
-        document.getElementById("demo5").innerHTML = reduceArr;
-        document.getElementById("demo6").innerHTML = reduceArr1;
-        document.getElementById("demo7").innerHTML = reduceArr2;
+      document.getElementById("demo5").innerHTML = reduceArr;
+      document.getElementById("demo6").innerHTML = reduceArr1;
+      document.getElementById("demo7").innerHTML = reduceArr2;
 
-        // every
-        const everyArr = numbers.every(myEveryFunc);
+      // every
+      const everyArr = numbers.every(myEveryFunc);
 
-        function myEveryFunc(value){
-            return value > 18;
-        }
-        document.getElementById("demo8").innerHTML = everyArr;
+      function myEveryFunc(value) {
+        return value > 18;
+      }
+      document.getElementById("demo8").innerHTML = everyArr;
 
-        // some
-        const someArr = numbers.some(myEveryFunc);
+      // some
+      const someArr = numbers.some(myEveryFunc);
 
-        document.getElementById("demo9").innerHTML = someArr; 
+      document.getElementById("demo9").innerHTML = someArr;
 
-        // index of
-        const position = fruits.indexOf("Apple") + 1;
-        const position2 = fruits.lastIndexOf("Apple") + 1;
-        const position1 = fruits.indexOf("Berry");
-        document.getElementById("demo10").innerHTML = position; 
-        document.getElementById("demo11").innerHTML = position1;  
-        document.getElementById("demo12").innerHTML = position2;  
+      // index of
+      const position = fruits.indexOf("Apple") + 1;
+      const position2 = fruits.lastIndexOf("Apple") + 1;
+      const position1 = fruits.indexOf("Berry");
+      document.getElementById("demo10").innerHTML = position;
+      document.getElementById("demo11").innerHTML = position1;
+      document.getElementById("demo12").innerHTML = position2;
 
-        // find
-        const first = numbers.find(myEveryFunc);
-        const fi = numbers.findIndex(myEveryFunc);
-        document.getElementById("demo13").innerHTML = "first item over 18 is : " + first; 
-        document.getElementById("demo14").innerHTML = fi;  
+      // find
+      const first = numbers.find(myEveryFunc);
+      const fi = numbers.findIndex(myEveryFunc);
+      document.getElementById("demo13").innerHTML =
+        "first item over 18 is : " + first;
+      document.getElementById("demo14").innerHTML = fi;
 
-        // Araay.from
-        const myArr = Array.from("ABCDEFG");
-        document.getElementById("demo15").innerHTML = myArr;  
+      // Araay.from
+      const myArr = Array.from("ABCDEFG");
+      document.getElementById("demo15").innerHTML = myArr;
 
-        // keys
-        const keys = fruits.keys();
-        let text = "";
-        for (let x of keys){
-            text += x + "<br>";
-        }
-        document.getElementById("demo16").innerHTML = text;  
+      // keys
+      const keys = fruits.keys();
+      let text = "";
+      for (let x of keys) {
+        text += x + "<br>";
+      }
+      document.getElementById("demo16").innerHTML = text;
 
-        // entries
-        const f = fruits.entries();
+      // entries
+      const f = fruits.entries();
 
-        for(x of f){
-            document.getElementById("demo17").innerHTML += x + "<br>";
-        }
+      for (x of f) {
+        document.getElementById("demo17").innerHTML += x + "<br>";
+      }
 
-        // includes
-        const i = fruits.includes("Apple");
-        const j = fruits.includes("Berry");
-        document.getElementById("demo18").innerHTML = i;
-        document.getElementById("demo19").innerHTML = j;
-
-        
-
-
-
-
-
-
-
-
+      // includes
+      const i = fruits.includes("Apple");
+      const j = fruits.includes("Berry");
+      document.getElementById("demo18").innerHTML = i;
+      document.getElementById("demo19").innerHTML = j;
     </script>
-
-
-</body>
+  </body>
 </html>

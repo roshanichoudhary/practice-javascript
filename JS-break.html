@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>JavaScript Break and Continue</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      // break
+      const cars = ["Volvo", "BMW", "SAAB"];
+      let txt = "";
+      for (let i = 0; i < 10; i++) {
+        if (i === 3) {
+          break;
+        }
+        txt += "the number is " + i + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = txt;
+
+      let text1 = "";
+      list: {
+        text1 += cars[0] + "<br>";
+        text1 += cars[1] + "<br>";
+        break list;
+        text1 += cars[2] + "<br>";
+        text1 += cars[3] + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = text1;
+
+      // Continue
+      let text = "";
+      for (let x = 0; x < 10; x++) {
+        if (x === 1) {
+          continue;
+        }
+        text += "The number is " + x + "<br>";
+      }
+      document.getElementById("demo3").innerHTML = text;
+    </script>
+  </body>
+</html>
