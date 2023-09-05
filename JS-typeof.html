@@ -9,6 +9,8 @@
     <h1>JavaScript typeof</h1>
 
     <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
 
     <script>
       document.getElementById("demo1").innerHTML =
@@ -41,6 +43,26 @@
         "<br>" +
         "null is " +
         typeof null;
+
+      document.getElementById("demo2").innerHTML =
+        typeof "john" +
+        "<br>" +
+        typeof 3.14 +
+        "<br>" +
+        typeof true +
+        "<br>" +
+        typeof false +
+        "<br>" +
+        typeof x;
+
+      document.getElementById("demo3").innerHTML =
+        typeof { name: "john", age: 34 } +
+        "<br>" +
+        typeof [1, 2, 3, 4] +
+        "<br>" +
+        typeof null +
+        "<br>" +
+        typeof function myFunc() {};
     </script>
   </body>
 </html>
