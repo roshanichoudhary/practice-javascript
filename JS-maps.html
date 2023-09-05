@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Maps</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+
+    <script>
+      // get
+      const cars = new Map([
+        ["Volvo", "red"],
+        ["SAAB", "blue"],
+        ["BMW", "pink"],
+      ]);
+      document.getElementById("demo1").innerHTML = cars.get("Volvo");
+
+      //   set
+      cars.set("Volvo", "green");
+      document.getElementById("demo2").innerHTML = cars.get("Volvo");
+
+      const fruits = new Map();
+
+      fruits.set("Apples", 500);
+      fruits.set("Banana", 300);
+      fruits.set("Orange", 800);
+      document.getElementById("demo3").innerHTML = fruits.get("Apples");
+
+      //   size
+      document.getElementById("demo4").innerHTML = fruits.size;
+
+      //   delete
+      fruits.delete("Apples");
+      document.getElementById("demo5").innerHTML = fruits.size;
+
+      //   has
+      const m = fruits.has("Apples");
+      document.getElementById("demo6").innerHTML = m;
+
+      //   get keys and values using forEach
+
+      fruits.set("Apples", 500);
+
+      let text = "";
+      fruits.forEach(function (value, key) {
+        text += key + " = " + value + "<br>";
+      });
+      document.getElementById("demo7").innerHTML = text;
+
+      let text1 = "";
+      for (const y of fruits.entries()) {
+        text1 += y + "<br>";
+      }
+      document.getElementById("demo8").innerHTML = text1;
+    </script>
+  </body>
+</html>
