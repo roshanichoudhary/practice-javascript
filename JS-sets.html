@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Sets</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+
+    <script>
+      const letters = new Set(["a", "b", "c"]);
+      document.getElementById("demo1").innerHTML = letters.size;
+
+      letters.add("d");
+      letters.add("e");
+      letters.add("f");
+      document.getElementById("demo2").innerHTML = letters.size;
+
+      letters.delete("a");
+      document.getElementById("demo3").innerHTML = letters.size;
+
+      const m = letters.has("a");
+      document.getElementById("demo4").innerHTML = m;
+
+      const n = letters.has("b");
+      document.getElementById("demo5").innerHTML = n;
+
+      //   Each value can only occur once in a Set.
+      letters.add("e");
+      letters.add("e");
+      letters.add("e");
+      letters.add("e");
+      document.getElementById("demo6").innerHTML = letters.size;
+
+      let text = "";
+      letters.forEach(function (value) {
+        text += value + "<br>";
+      });
+      document.getElementById("demo7").innerHTML = text;
+
+      document.getElementById("demo8").innerHTML = letters.values();
+
+      let text1 = "";
+      for (const x of letters.values()) {
+        text1 += x + "<br>";
+      }
+      document.getElementById("demo9").innerHTML = text1;
+    </script>
+  </body>
+</html>
