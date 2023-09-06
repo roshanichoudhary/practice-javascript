@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <p id="p01">The best things in life are free!</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+      const text = "Visit W3School";
+      const n = text.search(/w3school/i);
+      document.getElementById("demo1").innerHTML = n;
+
+      const result = text.replace(/w3school/i, "Microsoft");
+      document.getElementById("demo2").innerHTML = result;
+
+      const m = text.match(/[o]/g);
+      document.getElementById("demo3").innerHTML = m;
+
+      const num = "12345678";
+      const num_m = num.match(/[1-4]/g);
+      document.getElementById("demo4").innerHTML = num_m;
+
+      const color = "re, green, red, green, gren, gr, blue, yellow";
+      const color_m = color.match(/(red|green)/g);
+      document.getElementById("demo5").innerHTML = color_m;
+
+      let text1 = document.getElementById("p01").innerHTML;
+      const pattern = /e/;
+      document.getElementById("demo6").innerHTML = pattern.test(text1);
+
+      const obj = /e/.exec("The best things in life are free!");
+      document.getElementById("demo7").innerHTML =
+        "Found " +
+        obj[0] +
+        " in position " +
+        obj.index +
+        " in the text: " +
+        obj.input;
+    </script>
+  </body>
+</html>
