@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Type Conversion</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+
+    <script>
+      document.getElementById("demo1").innerHTML =
+        Number("3.14") +
+        "<br>" +
+        Number(Math.PI) +
+        "<br>" +
+        Number("99 88") +
+        "<br>" +
+        Number("9988") +
+        "<br>" +
+        Number("") +
+        "<br>" +
+        Number("   ") +
+        "<br>" +
+        Number("John");
+
+      // The unary + operator can be used to convert a variable to a number:
+      const y = "5";
+      const x = +y;
+      document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
+
+      //   If the variable cannot be converted, it will still become a number, but with the value NaN (Not a Number):
+      const a = "John";
+      const b = +a;
+      document.getElementById("demo3").innerHTML = typeof a + "<br>" + typeof b;
+
+      const c = 123;
+      document.getElementById("demo4").innerHTML =
+        String(c) + "<br>" + String(123) + "<br>" + String(120 + 3);
+
+      document.getElementById("demo5").innerHTML =
+        c.toString() +
+        "<br>" +
+        (123).toString() +
+        "<br>" +
+        (120 + 3).toString();
+
+      const d1 = new Date("1970-01-01");
+      document.getElementById("demo6").innerHTML = Number(d1);
+
+      const d2 = new Date("2018-01-01");
+      document.getElementById("demo7").innerHTML = Number(d2);
+
+      const d3 = new Date();
+      const t = d3.getTime();
+      document.getElementById("demo8").innerHTML = Number(t);
+
+      document.getElementById("demo9").innerHTML = Date().toString();
+
+      const n = Number(true);
+      const n1 = Number(false);
+      document.getElementById("demo10").innerHTML = n;
+      document.getElementById("demo11").innerHTML = n1;
+    </script>
+  </body>
+</html>
