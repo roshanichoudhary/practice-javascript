@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+
+    <input id="demo2" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+      // example-1
+      try {
+        adddlert("Hello World");
+      } catch (err) {
+        document.getElementById("demo1").innerHTML = err.message;
+      }
+
+      // example 2
+      function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo2").value;
+        try {
+          if (x.trim() == "") throw "empty";
+          if (isNaN(x)) throw "not a number";
+          x = Number(x);
+          if (x < 5) throw "too low";
+          if (x > 10) throw "too high";
+        } catch (err) {
+          message.innerHTML = "Input is " + err;
+        }
+      }
+
+      // example 3
+      function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo3").value;
+        try {
+          if (x.trim() == "") throw "empty";
+          if (isNaN(x)) throw "not a number";
+          x = Number(x);
+          if (x < 5) throw "too low";
+          if (x > 10) throw "too high";
+        } catch (err) {
+          message.innerHTML = "Input is " + err;
+        } finally {
+          document.getElementById("demo3").value = ""; //The finally statement lets you execute code, after try and catch, regardless of the result:
+        }
+      }
+
+      // JavaScript has a built in error object that provides error information when an error occurs.
+      // The error object provides two useful properties: name and message.
+      const num = 1;
+
+      try {
+        num.toPrecision(500);
+      } catch (err) {
+        document.getElementById("demo4").innerHTML = err.name;
+      }
+
+      const num1 = 1;
+      try {
+        num.toUpperCase();
+      } catch (err) {
+        document.getElementById("demo5").innerHTML = err.name;
+      }
+
+      try {
+        eval(alert("Hello"));
+      } catch (err) {
+        document.getElementById("demo6").innerHTML = err.name;
+      }
+
+      const x1 = 5;
+      try {
+        x1 += y + 1;
+      } catch (err) {
+        document.getElementById("demo7").innerHTML = err.name;
+      }
+
+      try {
+        decodeURI("%%%%");
+      } catch (err) {
+        document.getElementById("demo8").innerHTML = err.name;
+      }
+    </script>
+  </body>
+</html>
