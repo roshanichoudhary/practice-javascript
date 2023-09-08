@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Modules</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script type="module">
+      import message from "./message.js";
+      import { name, age } from "./person.js";
+
+      let text = "My name is " + name + ", I am " + age + ".";
+
+      document.getElementById("demo1").innerHTML = text;
+
+      document.getElementById("demo2").innerHTML = message();
+    </script>
+  </body>
+</html>
