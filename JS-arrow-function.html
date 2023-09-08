@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Arrow Function</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+      let myFunction = (a, b) => a * b;
+      document.getElementById("demo1").innerHTML = myFunction(4, 5);
+
+      let hello = "";
+
+      hello = function () {
+        return "Hello World";
+      };
+      document.getElementById("demo2").innerHTML = hello();
+
+      let greetings = () => {
+        return "Good Morning";
+      };
+      document.getElementById("demo3").innerHTML = greetings();
+
+      let person = () => "John Doe";
+      document.getElementById("demo4").innerHTML = person();
+
+      let people = (val) => "Hello " + val;
+      document.getElementById("demo5").innerHTML = people("Universe");
+    </script>
+  </body>
+</html>
