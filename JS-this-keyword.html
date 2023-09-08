@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>The JavaScript this Keyword</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <!-- In HTML event handlers, this refers to the HTML element that received the event: -->
+    <button onclick="this.style.display='none'">click to remove me</button>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 876,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo1").innerHTML = person.fullName();
+
+      // In this example, this refers to the window object:
+      let x = this;
+      document.getElementById("demo2").innerHTML = x;
+
+      // In a function, this refers to the window object:
+      document.getElementById("demo3").innerHTML = myFunction();
+
+      function myFunction() {
+        return this;
+      }
+
+      //   call() ans apply() : They can both be used to call an object method with another object as argument.
+      const person1 = {
+        fullName1: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      const y = person1.fullName1.call(person2);
+      document.getElementById("demo4").innerHTML = y;
+
+      //   With the bind() method, an object can borrow a method from another object.
+      const person3 = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName1: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const member = {
+        firstName: "Helly",
+        lastName: "cook",
+      };
+
+      const z = person1.fullName1.bind(member);
+      document.getElementById("demo4").innerHTML = z();
+    </script>
+  </body>
+</html>
