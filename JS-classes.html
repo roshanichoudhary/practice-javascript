@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript Classes</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age(x) {
+          return x - this.year;
+        }
+        color() {
+          return "Red";
+        }
+      }
+
+      const date = new Date();
+      let year = date.getFullYear();
+
+      const mycar1 = new Car("Audi", 2019);
+      const mycar2 = new Car("Ford", 2014);
+
+      document.getElementById("demo1").innerHTML =
+        mycar1.name + " " + mycar2.name;
+
+      document.getElementById("demo2").innerHTML =
+        "My car " + mycar1.name + " is " + mycar1.age(year) + " years old";
+
+      document.getElementById("demo3").innerHTML =
+        "Color of " + mycar2.name + " is " + mycar2.color();
+    </script>
+  </body>
+</html>
