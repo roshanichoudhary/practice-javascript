@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <div>
+    <h1>JS HTML DOM</h1>
+    <div id="main" style="font-weight: bold;">
+        <p class="intro">Hello World!.</p>
+        <p id="intro" class="intro">Finding HTML Elements</p>
+        <p class="intro">Lorem ipsum dummy text</p>
+    </div>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <form id="form-1">
+        First Name : <input type="text" value="Donald" /><br><br>
+        Last Name : <input type="text" value="Duck" /><br><br>
+        <input type="submit" value="Submit" />
+    </form>
+    <p id="demo6"></p>
+
+    <form name="form" onsubmit="formValidate()">
+        <input type="text" name="fname" />
+        <input type="submit" value="Submit" /> 
+    </form>
+
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Test</button>
+    <p id="demo7"></p>
+
+    <p id="id1">Hi There!</p>
+  
+    <button onclick="document.getElementById('id2').style.color = 'hotpink'">Change heading color</button>
+    <h1 id="id2">My heading 1</h1>
+
+    <h2 onclick="this.innerHTML = 'Ooopss!'">Click on this text!</h2>
+
+    <h2 onclick="changeThisText(this)">Change this Text</h2>
+
+    <button id="myBtn">The time is:</button>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+
+    <button id="myBtn1">Try It</button>
+    <p id="demo10"></p>
+
+    <button id="myBtn2">Click Me</button>
+    <br>
+    <br>
+    <button id="myBtn3">Multiple events</button>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <script>
+      const element = document.getElementById("intro");
+      document.getElementById("demo1").innerHTML =
+        "The text from intro element is: " + element.innerHTML;
+
+      const element1 = document.getElementsByTagName("p");
+      document.getElementById("demo2").innerHTML =
+        "The text of first paragraph (index 0) is: " + element1[0].innerHTML;
+
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = "The Text of second paragraph(index 1) is: " + y[1].innerHTML;
+
+        const m = document.getElementsByClassName("intro");
+        document.getElementById("demo4").innerHTML = "The text of first paragraph with class 'intro' is: " + m[0].innerHTML;
+
+        const n = document.querySelectorAll("p.intro");
+        document.getElementById("demo5").innerHTML = "The text of first paragraph with class 'intro' is: " + n[2].innerHTML;
+
+
+        const z = document.forms["form-1"];
+        let text = "";
+        for(let i = 0; i < z.length; i++){
+            text += z.elements[i].value + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = text;
+
+        document.write(Date());
+
+        function formValidate(){
+            const x = document.forms["form"]["fname"].value;
+            if(x == ""){
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+       
+
+        function myFunction(){
+            const t = document.getElementById("numb").value;
+            let text1;
+
+            if(isNaN(t) || t < 1 || t > 10 || t == ""){
+                text1 = "Input is invalid";
+            }else{
+                text1 = "Input ok";
+            }
+            document.getElementById("demo7").innerHTML = text1;
+        }
+        
+        document.getElementById("id1").style.fontSize = "20px";
+        document.getElementById("id1").style.color = "red";
+        document.getElementById("id1").style.fontWeight = "bolder";
+
+        function changeThisText(id){
+            id.innerHTML = "New text!";
+        }
+
+        document.getElementById("myBtn").onclick = displayDate;
+        function displayDate(){
+            document.getElementById("demo8").innerHTML = Date();
+        }
+
+        function cookiesCheck(){
+            var text2 = "";
+            if (navigator.cookieEnabled == true){
+                text2 = "cookies are enabled";
+            }else{
+                text2 = "cookies are not enabled";
+            }
+            document.getElementById("demo9").innerHTML = text2;
+        }
+        cookiesCheck();
+
+        document.getElementById("myBtn1").addEventListener("click", displayDay);
+        function displayDay(){
+            const date = new Date();
+            const day = date.getDay();
+            document.getElementById("demo10").innerHTML = day;
+        }
+        
+        document.getElementById("myBtn2").addEventListener("click", function(){
+            alert("Hello Roshani");
+        })
+
+        const u = document.getElementById("myBtn3");
+        u.addEventListener("mouseover", myFuncOne);
+        u.addEventListener("click", myFuncTwo);
+        u.addEventListener("mouseout", myFuncThree);
+
+        function myFuncOne() {document.getElementById("demo11").innerHTML += "Mouse Over!" + "<br>";}
+        function myFuncTwo() {document.getElementById("demo12").innerHTML += "Clicked!" + "<br>";}
+        function myFuncThree() {document.getElementById("demo13").innerHTML += "Mouse Out!" + "<br>";}
+
+    </script>
+  </body>
+</html>
